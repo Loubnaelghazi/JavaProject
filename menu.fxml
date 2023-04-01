@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="552.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.esalaf.MenuController">
+   <children>
+      <VBox prefHeight="552.0" prefWidth="185.0" style="-fx-background-color: #C4C8AB;">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="14.0" prefHeight="49.0" prefWidth="123.0" text="ESSALAF" textFill="#f5f4f4">
+                     <font>
+                        <Font name="Yu Gothic Light" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="btnAcceuil" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Cliquer" prefHeight="86.0" prefWidth="185.0" style="-fx-background-color: #C4C8AB;" text="Acceuil" textFill="#252423">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnClients" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Cliquer" prefHeight="90.0" prefWidth="185.0" style="-fx-background-color: #C4C8AB;" text="Clients" textFill="#252423">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnProduit" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Cliquer" prefHeight="86.0" prefWidth="185.0" style="-fx-background-color: #C4C8AB;" text="Produits" textFill="#252423">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnComm" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Cliquer" prefHeight="83.0" prefWidth="185.0" style="-fx-background-color: #C4C8AB;" text="Commandes" textFill="#252423">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="parametres" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Cliquer" prefHeight="87.0" prefWidth="185.0" style="-fx-background-color: #C4C8AB;" text="Crédits" textFill="#252423">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label />
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="136.0" prefHeight="17.0" prefWidth="163.0" text="Tous droits réservés ." textFill="#252423" />
+                  <Button alignment="CENTER" layoutX="23.0" layoutY="100.0" mnemonicParsing="false" onAction="#switchToDash1" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: black;" text=" SE DECONNECTER" textFill="#f2eded">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <Label alignment="CENTER" layoutX="188.0" layoutY="14.0" prefHeight="23.0" prefWidth="515.0" style="-fx-background-color: #b2292a;" text="BIENVENU !!" textFill="#f8f1f8">
+         <font>
+            <Font name="Verdana" size="18.0" />
+         </font>
+      </Label>
+      <Pane fx:id="client" layoutX="185.0" layoutY="47.0" prefHeight="123.0" prefWidth="521.0" style="-fx-background-color: #000000;">
+         <children>
+            <Label fx:id="text" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="37.0" prefHeight="49.0" prefWidth="169.0" text="ACCEUIL" textFill="WHITE">
+               <font>
+                  <Font name="Wingdings" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="minitext" layoutX="58.0" layoutY="20.0" prefHeight="17.0" prefWidth="115.0" text="/Acceuil" textFill="#fffdfd" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
