@@ -1,59 +1,50 @@
 package com.example.esalaf;
 
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-
 
 //controlleur de  interface login
 //controller les boutons.....
-public class HelloController implements Initializable {
+public class HelloController  {
     //on va recuperer les id deja donne aux boutons
-    @FXML
-private Button tf_connecter; //recuperation du bouton  se connecter
 
-    @FXML
-private TextField tf_user; //recuperation du nom d utilisateur
-
-    @FXML
-    private TextField tf_password; //recuperation du mot de passe
-    @FXML
-    private Button insciption;
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
 
 
 
-
-
-
-
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) { //implementation
-tf_connecter.setOnAction(new EventHandler<ActionEvent>() {
-    @Override
-    public void handle(ActionEvent actionevent) {  //comme om clique de javascript
-        //appel de quelle methode ou precisement quelle scene
-        DAOUtils.login(actionevent,tf_user.getText(),tf_password.getText());
-    }
-});
-
-insciption.setOnAction(new EventHandler<ActionEvent>() {
-    @Override
-    public void handle(ActionEvent event) {
-        try {
-            DAOUtils.changeScene(event, "inscription.fxml", "INSCRIPTION",null,null);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-});
+    public void switchToInscri(ActionEvent event ) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("Inscription.fxml")); //ouvrir hello.fxml
+        stage =(Stage) ((Node)event.getSource()).getScene().getWindow();
+scene=new Scene(root);
+stage.setScene(scene);
+stage.show();
 
     }
+    public void switchToMenu(ActionEvent event )throws IOException{
+        root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        stage =(Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
+ public void switchToDash(ActionEvent event )throws IOException{
+     root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+     stage =(Stage) ((Node)event.getSource()).getScene().getWindow();
+     scene=new Scene(root);
+     stage.setScene(scene);
+     stage.show();
+
+ }
+
+
+
 }
