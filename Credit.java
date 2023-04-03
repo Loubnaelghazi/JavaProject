@@ -1,17 +1,16 @@
-package com.example.esalaf;
-
+package com.example.essalaf;
 
 public class Credit {
-    private double montant;
-    private double tauxInteret;
+    private float montant;
+
     private int duree;
     private String nom;
 
 
-    public Credit(String nom, double montant, double tauxInteret, int duree) {
+    public Credit(String nom, int duree, float montant) {
         this.nom = nom;
         this.montant = montant;
-        this.tauxInteret = tauxInteret;
+
         this.duree = duree;
     }
     //getters et setters de la classe client pour pouvoir les utiliser par le dao
@@ -27,21 +26,15 @@ public class Credit {
 
 
 
-    public double getMontant() {
+    public float getMontant() {
         return montant;
     }
 
-    public void setMontant(double montant) {
+    public void setMontant(float montant) {
         this.montant = montant;
     }
 
-    public double getTauxInteret() {
-        return tauxInteret;
-    }
 
-    public void setTauxInteret(double tauxInteret) {
-        this.tauxInteret = tauxInteret;
-    }
 
     public int getDuree() {
         return duree;
@@ -52,5 +45,4 @@ public class Credit {
     }
 
 }
-
 
