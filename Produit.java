@@ -1,11 +1,11 @@
-package com.example.esalaf;
+package com.example.essalaf;
 
 public class Produit {
     private String nom;
-    private double prix;
+    private float prix;
     private int quantite;
 
-    public Produit(String nom, double prix, int quantite) {
+    public Produit(String nom, float prix, int quantite) {
         this.nom = nom;
         this.prix = prix;
         this.quantite = quantite;
@@ -19,11 +19,11 @@ public class Produit {
         this.nom = nom;
     }
 
-    public double getPrix() {
+    public float getPrix() {
         return prix;
     }
 
-    public void setPrix(double prix) {
+    public void setPrix(float prix) {
         this.prix = prix;
     }
 
@@ -34,7 +34,7 @@ public class Produit {
     public void setQuantite(int quantite) {
         this.quantite = quantite;
     }
-/////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////
     public double getPrixTotal() {  //calcul de prix total si je peux l utiliser
         return prix * quantite;
     }
