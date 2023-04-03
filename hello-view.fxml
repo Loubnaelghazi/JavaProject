@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.essalaf.HelloController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #6E676A;">
+            <children>
+                <Label alignment="CENTER" layoutX="5.0" layoutY="434.0" prefHeight="18.0" prefWidth="183.0" text="essalaf23@support.com" textFill="#e1dddd">
+                    <font>
+                        <Font name="Cambria Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="135.0" prefHeight="57.0" prefWidth="155.0" text="ESSALAF" textFill="#fffdfd">
+                    <font>
+                        <Font name="Yu Gothic Regular" size="34.0" />
+                    </font>
+                </Label>
+            <ImageView fitHeight="98.0" fitWidth="150.0" layoutX="46.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../money.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="9.0" layoutY="284.0" prefHeight="18.0" prefWidth="183.0" text="CREE PAR EL GHAZI LOUBNA" textFill="#fffdfd">
+               <font>
+                  <Font name="Microsoft Himalaya" size="18.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="457.0" prefWidth="387.0">
+            <children>
+                <TextField fx:id="tf_user" layoutX="138.0" layoutY="175.0" prefHeight="33.0" prefWidth="197.0" promptText="Sasir le nom d'utilisateur">
+                    <font>
+                        <Font name="Arial" size="12.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="tf_password" layoutX="138.0" layoutY="254.0" prefHeight="33.0" prefWidth="197.0" promptText="Saisir le mot de passe" />
+                <Label layoutX="27.0" layoutY="254.0" prefHeight="33.0" prefWidth="118.0" text="Mot de passe" />
+                <Label layoutX="27.0" layoutY="183.0" prefHeight="18.0" prefWidth="118.0" text="Nom d'utilisateur " />
+                <Button alignment="CENTER" layoutX="176.0" layoutY="323.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#switchToDash" prefHeight="33.0" prefWidth="107.0" style="-fx-background-color: #6E676A;" text="Se connecter" textAlignment="CENTER" textFill="#f2eaea">
+                    <font>
+                        <Font name="Arial Black" size="12.0" />
+                    </font>
+                </Button>
+                <Label layoutX="86.0" layoutY="396.0" prefHeight="17.0" prefWidth="118.0" text="Non Inscrit ?" />
+                <Button layoutX="154.0" layoutY="392.0" mnemonicParsing="false" onAction="#switchToInscri" prefHeight="25.0" prefWidth="197.0" style="-fx-background-color: transparent;" text="Cliquez ici pour nous rejoindre !" textFill="#810ffc" underline="true">
+                    <font>
+                        <Font name="Calibri Bold" size="13.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="68.0" layoutY="39.0" prefHeight="98.0" prefWidth="283.0" text="SE CONNECTER " textFill="#654e4e">
+                    <font>
+                        <Font name="Yu Gothic Light" size="29.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</HBox>
