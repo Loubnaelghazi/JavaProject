@@ -4,13 +4,17 @@ import java.time.LocalDate; //pour la date
 
 public class Commande {
     private int id;
-    private LocalDate date;
-    private String nomClient;
-    private double montantTotal;
+   package com.example.essalaf;
 
-    public Commande(int id, LocalDate date, String nomClient, double montantTotal) { //constructeur
+public class Commande {
+    private int id;
+ private int produits;
+    private String nomClient;
+    private float montantTotal;
+
+    public Commande(int id, int  produits, String nomClient, float montantTotal) { //constructeur
         this.id = id;
-        this.date = date;
+        this. produits =  produits;
         this.nomClient = nomClient;
         this.montantTotal = montantTotal;
     }
@@ -23,12 +27,12 @@ public class Commande {
         this.id = id;
     }
 
-    public LocalDate getDate() {
-        return date;
+    public int getDate() {
+        return  produits;
     }
 
-    public void setDate(LocalDate date) {
-        this.date = date;
+    public void setDate(int  produits) {
+        this. produits =  produits;
     }
 
     public String getNomClient() {
@@ -39,12 +43,11 @@ public class Commande {
         this.nomClient = nomClient;
     }
 
-    public double getMontantTotal() {
+    public float getMontantTotal() {
         return montantTotal;
     }
 
-    public void setMontantTotal(double montantTotal) {
+    public void setMontantTotal(float montantTotal) {
         this.montantTotal = montantTotal;
     }
 }
-
