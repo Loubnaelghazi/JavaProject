@@ -1,54 +1,41 @@
-package com.example.esalaf;
+package com.example.essalaf;
 
-import java.sql.*;
-import java.util.ArrayList;
+public class ClientDao  {
 
-public class ClientDao {
-    private Connection connexion;
+private int Id_client ;
+private String Nom ;
+private String Telephone;
 
-    public ClientDao() throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/esalaf";
-        String utilisateur = "root";
-        String motDePasse = "";
-        connexion = DriverManager.getConnection(url, utilisateur, motDePasse);
+    public ClientDao(int id_client, String nom, String telephone) {
+        Id_client = id_client;
+        Nom = nom;
+        Telephone = telephone;
     }
 
-    public void ajouterClient(Client client) throws SQLException {
-        String sql = "INSERT INTO client (id_client, nom, telephone) VALUES (?, ?, ?)";
-        PreparedStatement preparedStatement = connexion.prepareStatement(sql);
-        preparedStatement.setString(1, client.getNom());
-        preparedStatement.setInt(2, client.getId());
-        preparedStatement.setInt(3, client.getPhone());
-        preparedStatement.executeUpdate();
+    public int getId_client() {
+        return Id_client;
     }
 
-    public ArrayList<Client> listerClients() throws SQLException {
-        ArrayList<Client> clients = new ArrayList<>();
-        String sql = "SELECT * FROM client";
-        Statement statement = connexion.createStatement();
-        ResultSet result = statement.executeQuery(sql);
-        while (result.next()) {
-            int id = result.getInt("id_client");
-            String nom = result.getString("nom");
-            int tel = result.getInt("telephone");
-            clients.add(new Client(id, nom, tel));
-        }
-        return clients;
+    public String getNom() {
+        return Nom;
     }
 
-    public void updateClient(Client client) throws SQLException {
-        String sql = "UPDATE client SET nom=?, telephone=? WHERE id_client=?";
-        PreparedStatement preparedStatement = connexion.prepareStatement(sql);
-        preparedStatement.setString(1, client.getNom());
-        preparedStatement.setInt(2, client.getPhone());
-        preparedStatement.setInt(3, client.getId());
-        preparedStatement.executeUpdate();
+    public String getTelephone() {
+        return Telephone;
     }
 
-    public void supprimerClient(Client client) throws SQLException {
-        String sql = "DELETE FROM client WHERE id_client=?";
-        PreparedStatement preparedStatement = connexion.prepareStatement(sql);
-        preparedStatement.setInt(1, client.getId());
-        preparedStatement.executeUpdate();
+    public void setId_client(int id_client) {
+        Id_client = id_client;
     }
+
+    public void setNom(String nom) {
+        Nom = nom;
+    }
+
+    public void setTelephone(String telephone) {
+        Telephone = telephone;
+    }
+
+
+
 }
