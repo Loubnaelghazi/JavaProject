@@ -1,4 +1,4 @@
-package com.example.esalaf;
+package com.example.essalaf;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
