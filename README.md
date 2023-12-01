@@ -42,7 +42,7 @@ To run the Essalaf project locally, follow these steps:
    git clone https://github.com/Loubnaelghazi/essalaf-project.git
 ## Project Report
 
-For a detailed overview of the development process, challenges, and design choices, please refer to our [project report](https://github.com/Loubnaelghazi/JavaProject/blob/main/RAPPORT%20-ELGHAZI%20LOUBNA.pdf)   
+For a detailed overview of the development process, challenges, and design choices, please refer to my [project report](https://github.com/Loubnaelghazi/JavaProject/blob/main/RAPPORT%20-ELGHAZI%20LOUBNA.pdf)   
 ## License
 
 Strictly forbidden to take or use the source code without permission and proper attribution.
